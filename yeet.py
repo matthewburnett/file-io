@@ -22,4 +22,19 @@ print(
     f"Total words with exactly 3 A's: {len([word for word in words_alpha if word.count('a') == 3])}")
 
 print(
-    f"Total words that have a Q but not followed by U: {len([word for word in words_alpha if 'qu' not in word and 'q' in word])}")
+    f"Total words that have a Q but not followed by U: {len(list(set([word for word in words_alpha for i in range(len(word) - 1) if word[i] == 'q' else if word[i+1] != 'u' else if word[-1] == 'q' else if 'q' in words_alpha])))}")
+
+# zoop = set([])
+
+# for word in words_alpha:
+#     for i in range(len(word) - 1):
+#         if word[i] == 'q' and word[i+1] != 'u':
+#             zoop.add(word)
+#         if word[-1] == 'q':
+#             zoop.add(word)
+    
+# if 'q' in words_alpha:
+#         zoop.add('q')
+
+# print(len(list(zoop)))
+
